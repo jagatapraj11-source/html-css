@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mountain Adventure</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background-color: #081418;
+      color: #fff;
+    }
+
+    header {
+      background: url('image/VG.png') center/cover no-repeat;
+      height: 90vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.8rem;
+      font-weight: 600;
+      text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+    }
+
+    header p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      opacity: 0.8;
+    }
+
+    .section {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 80px 10%;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      flex-wrap: wrap;
+    }
+
+    .section:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .text {
+      width: 45%;
+      min-width: 300px;
+    }
+
+    .text h2 {
+      font-size: 2rem;
+      color: #8fd4b3;
+      margin-bottom: 10px;
+    }
+
+    .text p {
+      color: #ccc;
+      line-height: 1.6;
+    }
+
+    .image {
+      width: 45%;
+      min-width: 300px;
+    }
+
+    .image img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.4);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 0;
+      font-size: 0.9rem;
+      color: #aaa;
+      background: #0c181c;
+    }
+
+   
+.footer{
+    width:100%;
+    background-color:#071526;
+    color:white;
+    padding:60px 100px;
+    display:flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+.footer-left{
+    width:300px;
+}
+.footer-left h2{
+    letter-spacing:2px;
+    margin-bottom:20px;
+}
+.footer-left p{
+    margin-bottom:40px;
+    color:#d0d0d0;
+}
+.footer-left .copy{
+    color:#9b9b9b;
+    font-size:14px;
+}
+
+.footer-right{
+    display:flex;
+    gap:80px;
+}
+
+.col{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+.col-title{
+    color:#e8d37a;
+    font-weight:600;
+    margin-bottom:10px;
+}
+.col a{
+    text-decoration:none;
+    color:#c6cdd3;
+    font-size:15px;
+}
+.col a:hover{
+    color:white;
+}
+
+@media (max-width:900px){
+    .footer{
+        padding:50px 40px;
+        flex-direction:column;
+        gap:40px;
+    }
+}
+@media (max-width:550px){
+    .footer-right{
+        flex-direction:column;
+        gap:40px;
+    }
+}
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Be Prepared For The Mountains And Beyond!</h1>
+  </header>
+
+  <div class="section">
+    <div class="text">
+      <h2>01. What Level of Hiker Are You?</h2>
+      <p>Determining what level of hiker you are can be an important tool when planning future hikes. This hiking level guide will help you plan hikes according to different hike ratings set by various websites like All Trails and Modern Hiker. What type of hiker are you – novice, moderate, advanced moderate, expert, or expert backpacker? .</p>
+    </div>
+    <div class="image">
+      <img src="image/01.png" alt="Hiking trail">
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="text">
+      <h2>02. Understand Your Map & Timing</h2>
+      <p>The nice thing about beginning hiking is that you don’t really need any special gear, you can probably get away with things you already have.
+Let’s start with clothing. A typical mistake hiking beginners make is wearing jeans and regular clothes, which will get heavy and chafe wif they get sweaty or wet.</p>
+    </div>
+    <div class="image">
+      <img src="c:\Users\User\Desktop\html-css\practical2\image\01 (1).png" alt="Map reading">
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="text">
+      <h2>03. Pick the Right Hiking Gear</h2>
+      <p> To start, print out the hiking guide and map. If it’s raining, throw them in a Zip-Lock bag. Read over the guide, study the map, and have a good idea of what to expect. I like to know what my next landmark is as I hike. For example, I’ll read the guide and know that say, in a mile, I make a right turn at the junction..</p>
+    </div>
+    <div class="image">
+      <img src="c:\Users\User\Desktop\html-css\practical2\image\01 (2).png" alt="Hiking gear">
+    </div>
+  </div>
+
+  <footer>
+  </footer>
+  <div class="footer">
+
+    <!-- LEFT SIDE -->
+    <div class="footer-left">
+        <h2>MNTN</h2>
+        <p>Get out there & discover your next<br> slope, mountain & destination!</p>
+        <div class="copy">Copyright 2023 MNTN, Inc. Terms & Privacy</div>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="footer-right">
+
+        <!-- COLUMN 1 -->
+        <div class="col">
+            <div class="col-title">More on The Blog</div>
+            <a href="#">About MNTN</a>
+            <a href="#">Contributors & Writers</a>
+            <a href="#">Write For Us</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+        </div>
+
+        <!-- COLUMN 2 -->
+        <div class="col">
+            <div class="col-title">More on MNTN</div>
+            <a href="#">The Team</a>
+            <a href="#">Jobs</a>
+            <a href="#">Press</a>
+        </div>
+
+    </div>
+</div>  
+   
+</body>
+</html>
