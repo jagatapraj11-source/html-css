@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Funiro Furniture</title>
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      box-sizing: border-box;
+    }
+
+    .navbar {
+      width: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      background-color: #fff;
+      padding: 16px 40px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .menu {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: black;
+      font-weight: 500;
+    }
+
+    .menu a:hover {
+      color: #B88E2F;
+    }
+
+    .menu-image {
+      display: flex;
+      gap: 25px;
+    }
+
+    .page1 {
+      position: relative;
+      width: 100%;
+    }
+
+    .background-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .rectangle {
+      width: 400px;
+      background-color: #FFF3E3;
+      padding: 30px;
+      position: absolute;
+      top: 50%;
+      right: 10%;
+      transform: translateY(-50%);
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .rectangle1 {
+      color: #B88E2F;
+      padding: 10px 0;
+    }
+
+    .titel3 a {
+      background-color: #B88E2F;
+      color: white;
+      padding: 12px 24px;
+      display: inline-block;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .titel3 a:hover {
+      background-color: #a07826;
+    }
+
+    .page2 {
+      width: 100%;
+      padding: 60px 0;
+      text-align: center;
+    }
+
+    .Image-2 {
+      display: flex;
+      justify-content: space-evenly;
+      margin-top: 30px;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .Image-2 img {
+      width: 300px;
+      border-radius: 12px;
+    }
+
+    .page3-heading {
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    .Image-3 {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      gap: 30px;
+      padding: 40px 0;
+    }
+
+    .Image-3 img {
+      width: 250px;
+      border-radius: 8px;
+    }
+
+    .options {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 40px;
+    }
+
+    #Show-more {
+      background-color: white;
+      padding: 10px 20px;
+      color: #B88E2F;
+      border: 2px solid #B88E2F;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    #Show-more:hover {
+      background-color: #B88E2F;
+      color: white;
+    }
+
+    .page4 {
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      background-color: #FCF8F3;
+      padding: 60px 40px;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .page4-heading {
+      max-width: 500px;
+    }
+
+    .title2 {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    #Explore-More {
+      padding: 12px 24px;
+      background-color: #B88E2F;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    #Explore-More:hover {
+      background-color: #a07826;
+    }
+
+    .page4-image img {
+      width: 400px;
+      border-radius: 12px;
+    }
+
+    .page5 {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 60px 20px;
+      background-color: #f5f5f5;
+      flex-wrap: wrap;
+      gap: 40px;
+    }
+
+    .page5 h2 {
+      margin-bottom: 10px;
+    }
+
+    .page5 ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .page5 li {
+      margin-bottom: 8px;
+      cursor: pointer;
+    }
+
+    .page5 li:hover {
+      text-decoration: underline;
+      color: #B88E2F;
+    }
+
+    .gap {
+      padding-top: 10px;
+      width: 200px;
+    }
+
+    .gap1 {
+      padding-top: 20px;
+      font-size: 14px;
+      color: gray;
+    }
+
+    @media (max-width: 992px) {
+      .navbar {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .rectangle {
+        right: 5%;
+        width: 80%;
+      }
+
+      .page4 {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .page4-image img {
+        width: 100%;
+        max-width: 350px;
+      }
+
+      .Image-2, .Image-3 {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .menu {
+        flex-direction:column;
+        gap: 10px;
+      }
+
+      .rectangle {
+        position: static;
+        transform: none;
+        margin: 20px auto;
+        width: 90%;
+      }
+
+      .page5 {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- ===== NAVBAR ===== -->
+  <div class="navbar">
+    <div class="logo"><img src="c:\Users\User\Desktop\html-css\practical4\images\WhatsApp Image 2025-03-26 at 8.50.31 PM 1 (1).png" alt="" width="100"></div>
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="#">Shop</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+      <div class="menu-image">
+        <a href="#"><img src="c:\Users\User\Desktop\html-css\practical4\images\Group 1 (1).png"></a>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== HERO SECTION ===== -->
+  <div class="page1">
+    <div class="background-image">
+      <img src="c:\Users\User\Desktop\html-css\practical4\images\scandinavian-interior-mockup-wall-decal-background 1 (2).png" alt="Hero Background">
+      <div class="rectangle">
+        <p>New Arrival</p>
+        <div class="rectangle1"><h1>Discover Our New Collection</h1></div>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.</p>
+        <div class="titel3"><a href="#">BUY NOW</a></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== PAGE 2 ===== -->
+  <div class="page2">
+    <h1>Browse The Range</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+    <div class="Image-2">
+      <div><img src="c:\Users\User\Desktop\html-css\practical4\images\Mask Group (3).png" alt=""><h3>Dining</h3></div>
+     <div><img src="c:\Users\User\Desktop\html-css\practical4\images\Image-living room (1).png" alt=""><h3>Living</h3></div>
+      <div><img src="c:\Users\User\Desktop\html-css\practical4\images\Mask Group (4).png" alt=""><h3>Bedroom</h3></div>
+    </div>
+    </div>
+  </div>
+
+  <!-- ===== PAGE 3 ===== -->
+  <div class="page3">
+    <div class="page3-heading"><h1>Our Products</h1></div>
+    <div class="Image-3">
+      <div><img src="c:\Users\User\Desktop\html-css\practical4\images\Featured Products (4).png" alt=""></div>
+      <div><img src="c:\Users\User\Desktop\html-css\practical4\images\Pop Up.png" alt=""></div>
+      <div><img src="c:\Users\User\Desktop\html-css\practical4\images\Featured Products (5).png" alt=""></div>
+      <div><img src="c:\Users\User\Desktop\html-css\practical4\images\Featured Products (6).png" alt=""></div>
+    </div>
+    <div class="options"><a id="Show-more">Show more</a></div>
+  </div>
+
+  <!-- ===== PAGE 4 ===== -->
+  <div class="page4">
+    <div class="page4-heading">
+      <h1>50+ Beautiful rooms inspiration</h1>
+      <div class="title2"><p>Our designers have created many beautiful room prototypes to inspire you.</p></div>
+      <div class="titel3"><a id="Explore-More" href="#">Explore More</a></div>
+    </div>
+    <div class="page4-image"><img src="c:\Users\User\Desktop\html-css\practical4\images\Products (1).png" alt="Room Design"></div>
+  </div>
+
+  <!-- ===== FOOTER ===== -->
+  <div class="page5">
+    <div class="box1">
+      <h2>Funiro</h2>
+      <div class="gap"><p>400 University Drive Suite 200 Coral Gables, FL 33134 USA</p></div>
+      <div class="gap1"><p>2023 furino. All rights reverved</p></div>
+    </div>
+
+    <div class="box2">
+      <h2>Links</h2>
+      <ul><li>Home</li><li>Shop</li><li>About</li><li>Contact</li></ul>
+    </div>
+
+    <div class="box3">
+      <h2>Help</h2>
+      <ul><li>Payment Options</li><li>Returns</li><li>Privacy Policies</li></ul>
+    </div>
+
+    <div class="box4">
+      <h2>Newsletter</h2>
+      <p>Enter your email to </p><button>subscribe</button>
+    </div>
+  </div>
+
+</body>
+</html>
