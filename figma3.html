@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        *{padding: 0px; margin: 0px; font-family: 'Segoe UI';}
+
+        li{
+            margin-bottom: 10px;
+        }
+        .main{
+            width: 100%;
+            height: 100px;
+        }
+
+        .navbar{
+            width: 100%;
+            height: 100px;
+            display: flex;  
+            align-items: center;
+        }
+        a{text-decoration: none;
+        color: black;}
+
+        .logo{
+            padding-left: 150px;
+            display: flex;
+            align-items: center;
+        }
+
+        .menu{
+            display: flex;
+            align-items: center;
+            padding-left: 150px;
+            gap: 40px;
+        }
+        .Login{
+            padding-left: 400px;
+        }
+        .Learn-More{
+            color: white;
+            background-color: #96BB7C;
+            height: 30px;
+            width: 120px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .box1{
+            width: 100px;
+            height: 200px;
+            background-color: #EFF8ED;
+            position: absolute;
+            
+            
+        }
+        .box2{
+            width: 500px;
+            height: 700px;
+            background-color: #EFF8ED;
+            position: absolute;
+            right: 0px; 
+            
+        }
+        .page1{
+            height: 700px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .page1-box{
+
+            width: 500px;
+            height: 400px;
+            position: absolute;
+            right: 400px;
+            
+        }
+        .page1-box1{
+            color: #96BB7C;
+            padding-bottom: 30px;
+            display: flex;
+            justify-content: center;
+        }
+        .page1-box2{
+            padding-bottom: 30px;
+            display: flex;
+            justify-content: center;
+        }
+        .page1-box3{
+            padding-bottom: 30px;
+            display: flex;
+            justify-content: center;
+        }
+        .page1-box4{
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+         
+        }
+        .sub-box1{
+            width: 150px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            background-color: #96BB7C;
+
+        }
+        .sub-box2{
+            width: 150px;
+            height: 50px;
+             display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #96BB7C;
+            border: 2px solid  #96BB7C;
+        }
+
+        .page2{
+            width: 100%;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .logo2{
+            width: 100%;
+            display: flex;
+             justify-content: space-evenly;
+
+        }
+        .page3{
+            width: 100%;
+            height: 700px;
+            display: flex;
+            justify-content: center;
+            
+
+        }
+        .main-heading{
+            width: 1000px;
+            height: 500px;
+        }
+        .heading1{
+            width: 500px;
+            padding-top: 50px;
+            padding-bottom: 90px;
+
+        }
+        .head{
+            color: #96BB7C;
+        }
+        .heading2{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 20px;
+            padding-top: 20px;
+
+        }
+        .page-box{
+            gap: 20px;
+            width: 300px;
+        }
+        .page-box:hover{
+        background-color: #96BB7C;
+        color: white;
+        transform: scale(1.1);
+        transform: rotate(45 deg);
+    }
+        .h{
+            padding-top: 20px;
+            padding-bottom: 40px;
+        }
+
+        .page4{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+       
+        .pa-he1{
+            padding-top: 20px;
+        }
+        .pa-he{
+            display: flex;
+            color: #96BB7C;
+            gap: 20px;
+            padding-top: 20px;
+        }
+        .page4-heading{
+            width: 350px;
+            height: 200px;
+        }
+        .h{
+            display: flex;
+            gap: 20px;
+        }
+         .page5{
+            width: 100%;
+            height: 900px;
+            display: flex;
+            justify-content: center;
+        }
+        .main-heading5{
+            width: 1000px;
+            height: 500px;
+        }
+        .heading5{
+            width: 500px;
+            padding-top: 50px;
+            padding-bottom: 90px;
+
+        }
+        .head5{
+            color: #96BB7C;
+        }
+        .heading2-5{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 20px;
+            padding-top: 20px;
+
+        }
+        .page-box5{
+            gap: 20px;
+            width: 300px;
+            box-shadow: 0px 0px 10px 0px black;
+        }
+        .training{
+            color: #96BB7C;
+        }
+        .sale{
+            display: flex;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            gap: 5px;
+        }
+        .Learn{
+            gap: 2px;
+            border: 2px solid #96BB7C;
+            width: 100px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            border-radius: 16px;
+            color: #96BB7C;
+            padding-left: 20px;
+            
+        }
+        .h2{
+            color: #252B42;
+            padding-bottom: 10px;
+        }
+        .prices{
+            display: flex;
+            gap: 20px;
+        }
+        .prices2{
+            color: #FFAB71;
+            padding-bottom: 10px;
+        }
+       
+        .page6{
+            width: 100%;
+            height: 900px;
+            display: flex;
+            justify-content: center;
+        }
+        .main-heading6{
+            width: 1000px;
+            height: 400px;
+
+        }
+        .heading6{
+            width: 500px;
+            padding-top: 50px;
+            padding-bottom: 90px;
+
+        }
+        .head6{
+            color: #96BB7C;
+        }
+        .heading6-1{
+            width: 1000px;
+            height: 400px;
+        }
+        .main-box{
+              height: 500px;
+            width: 800px;
+            display: flex;
+            gap: 100px;
+        }
+       
+        .page-box6{
+            height: 500px;
+            width: 200px;
+        }
+        .box6-image{
+            padding-top: 10px;
+        }
+        .free{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .prices-image{
+            padding-top: 10px;
+        }
+        .Per-month{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .TFF{
+            width: 200px;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #96BB7C;
+            color: white;
+        }
+        .per-1{
+            padding-bottom: 10px;
+        }
+        .page7{
+            width: 100%;
+            height: 900px;
+            display: flex;
+            justify-content: center;
+        }
+        .main-heading7{
+            width: 1000px;
+            height: 800px;
+
+        }
+        .heading7{
+            width: 500px;
+            padding-top: 50px;
+            padding-bottom: 90px;
+
+        }
+        .head7{
+            color: #96BB7C;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .main-box7{
+            width: 800px;
+            height: 500px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .box7-1{
+            width: 300px;
+            height: 300px;
+            
+        }
+          .box7-2{
+            width: 300px;
+            height: 300px;
+        }
+        .name{
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+        .box7-image{
+            padding-top: 10px;
+        }
+        .page8{
+             width: 100%;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+        }
+        .sub-main-box{
+             width: 800px;
+            height: 200px;
+        }
+        .head1{
+            display: flex;
+            justify-content: center;
+            color: #96BB7C;
+            padding-top: 30px;
+        }
+         .head2{
+            display: flex;
+            justify-content: center;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+         .head3{
+            display: flex;
+            justify-content: center;
+        }
+        .rectangle{
+            width: 800px;
+            height: 200px;
+             display: flex;
+             align-items: center;
+             gap: 30px;
+        }
+        .Email{
+             width: 1000px;
+             height: 50px;
+             background-color: #F9F9F9;
+              display: flex;
+             align-items: center;
+             padding-left: 10px;
+        }
+        .Subscribe{
+             width: 100px;
+             height: 50px;
+             background-color: #96BB7C;
+             color: white;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+        }
+        .page9{
+            width: 100%;
+            height: 400px;
+        }
+        .page9-box{
+            display: flex;
+            justify-content: space-evenly;
+        }
+        .row{
+            width: 200px;
+            height: 200px;
+        }
+        .row5{
+            width: 200px;
+            height: 200px;
+        }
+        .row-image1{
+            display: flex;
+            gap: 50px;
+        }
+         .row-image2{
+            display: flex;
+            gap: 50px;
+        }
+         .row-image3{
+            display: flex;
+            gap: 50px;
+        }
+        .page9-box2{
+             width: 100%;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .last1{
+           color: #737373;
+        }
+        .last-image{
+            display: flex;
+            gap: 50px; 
+        }
+        
+
+    </style>
+</head>
+<body>
+    <div class="main">
+    <div class="navbar">
+        <div class="logo"><img src="image/navbar-brand sec- (1).png" alt=""></div>
+        <div class="menu">
+            <a href="">Home</a>
+            <a href="">Product</a>
+            <a href="">pricing</a>
+            <a href="">contact</a>
+            <div class="Login"><h5>Login</h5></div>
+            <div class="Learn-More"><h5>Learn More</h5></div>
+
+        </div>
+       
+    </div>
+    <div class="box1"></div>
+       <div class="box2"></div>
+       </div>
+    </div>
+
+
+
+    <div class="page1">
+        <div class="page1-box">
+            <div class="page1-box1"><h4>For Better Future</h4></div>
+            <div class="page1-box2"><h1>HIGH QUALITY COURSES </h1></div>
+            <div class="page1-box3"><h3>Find the right instructor for you from over 10,000 teachers</h3></div>
+            <div class="page1-box4">
+                <div class="sub-box1"><h5>Get Quote Now</h5></div>
+                <div class="sub-box2"><h5>Learn More</h5></div>
+            </div>
+        </div>
+        
+    </div>
+
+    <div class="page2">
+        <div class="logo2">
+            <img src="image/Companies-1.png" alt="">
+          
+        </div>
+    </div>
+
+    <div class="page3">
+        <div class="main-heading">
+        <div class="heading1">
+            <div class="head">
+                <p>Quick examination</p></div>
+            <h1>Approdable Packages</h1>
+            <p>Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics </p>
+        </div>
+        <div class="heading2">
+            <div class="page-box">
+                <img src="image/icon cool-icon-l20.png" alt="">
+                <div class="h"><h5>Training Courses</h5></div>
+                <p>The gradual accumulation of information about </p>
+            </div>
+            <div class="page-box">
+                <img src="image/icon cool-icon-l23.png" alt="">
+                <div class="h"><h5>Training Courses</h5></div>
+                <p>The gradual accumulation of information about </p>
+            </div>
+            <div class="page-box">
+                <img src="image/icon cool-icon-l29.png" alt="">
+                <div class="h"><h5>Expert instruction</h5></div>
+                <p>The gradual accumulation of information about </p>
+            </div>
+            <div class="page-box">
+                <img src="image/icon cool-icon-l26.png" alt="">
+                <div class="h"><h5>Lifetime access</h5></div>
+                <p>The gradual accumulation of information about </p>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="page4">
+        <div class="page4-image">
+            <img src="image/col-md-6.png" alt="">
+        </div>
+        <div class="page4-heading">
+            <h1>Most Popular Courses</h1>
+            <div class="pa-he1"><p>Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics </p></div>
+            <div class="pa-he">
+                <p>Learn More</p>
+            <img src=" image/icon arrow-next.png"></div>
+        </div>
+    </div>
+    <div class="page5">
+        <div class="main-heading5">
+        <div class="heading5">
+            <div class="head5">
+                <p>Quick examination</p></div>
+            <h1>Approdable Packages</h1>
+            <p>Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics </p>
+        </div>
+        <div class="heading2-5">
+            <div class="page-box5">
+                <img src="image/col-md-3.png" alt="">
+               
+            </div>
+            
+             <div class="page-box5">
+                <img src="image/col-md-3 (2).png" alt="">
+                
+            </div>
+            
+
+             <div class="page-box5">
+                <img src="image/Product card.png" alt="">
+                
+            </div>
+
+            <div class="page-box5">
+                <img src="image/col-md-3 (3).png" alt="">
+              
+    </div>
+  </div>
+  
+  <div class="page6">
+        <div class="main-heading6">
+        <div class="heading6">
+            <div class="head6">
+                <p>Health Queries</p></div>
+            <h1>Our Experts Teacher</h1>
+            <p>Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics </p>  
+        </div>
+             <div class="main-box">
+             <div class="page-box6">
+                <div class="box6-image"><img src="image/circle sec-.png" alt=""></div>
+                <div class="free">
+                    <h2>HELLO</h2></div>
+                    <p>Organize across all apps by hand</p>
+                <div class="prices-image">
+                    <img src="image/price sec-.png" alt="">
+                </div>
+                <div class="Per-month"><p>Per month</p></div>
+                <div class="per-1"><P>Slate helps you see how many more days you need...</P></div>
+               <div class="TFF">Try for free</div> 
+               
+               <ul>
+                <li>Unlimited product updates</li>
+               <li>Unlimited product updates</li>
+               <li>Unlimited product updates</li>
+               <li>1GB  Cloud storage</li>
+               <li>Email and community support</li>
+            </ul>
+            </div>
+            
+            <div class="main-box">
+             <div class="page-box6">
+                <div class="box6-image"><img src="image/circle sec-.png" alt=""></div>
+                <div class="free">
+                    <h2>HELLO</h2></div>
+                    <p>Organize across all apps by hand</p>
+                <div class="prices-image">
+                    <img src="image/price sec-.png" alt="">
+                </div>
+                <div class="Per-month"><p>Per month</p></div>
+                <div class="per-1"><P>Slate helps you see how many more days you need...</P></div>
+               <div class="TFF">Try for free</div> 
+               
+               <ul>
+                <li>Unlimited product updates</li>
+               <li>Unlimited product updates</li>
+               <li>Unlimited product updates</li>
+               <li>1GB  Cloud storage</li>
+               <li>Email and community support</li>
+            </ul>
+            </div>
+           
+
+            <div class="main-box">
+             <div class="page-box6">
+                <div class="box6-image"><img src="image/circle sec-.png" alt=""></div>
+                <div class="free">
+                    <h2>HELLO</h2></div>
+                    <p>Organize across all apps by hand</p>
+                <div class="prices-image">
+                    <img src="image/price sec-.png" alt="">
+                </div>
+                <div class="Per-month"><p>Per month</p></div>
+                <div class="per-1"><P>Slate helps you see how many more days you need...</P></div>
+               <div class="TFF">Try for free</div> 
+               
+               <ul>
+                <li>Unlimited product updates</li>
+               <li>Unlimited product updates</li>
+               <li>Unlimited product updates</li>
+               <li>1GB  Cloud storage</li>
+               <li>Email and community support</li>
+            </ul>
+            </div>
+        </div>
+  </div>
+    </div>
+     </div>
+         </div>
+         
+ <div class="page7">
+        <div class="main-heading7">
+        <div class="heading7">
+            <div class="head7">
+                <p>Testimonials</p></div>
+            <h1>Our Experts Teacher</h1>
+            <p>Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics </p>  
+        </div>
+        <div class="main-box7">
+            <div class="box7-1">
+                <div class="box7-image"><img src="image/circle sec- (2).png" alt=""></div>
+                <p>Slate helps you see how many more days you need to work to reach your financial goal for the month and year.</p>
+                <div class="box7-image">
+                    <img src="image/stars sec-.png" alt="">
+                    <div class="name"><h4>Regina Miles</h4></div>
+                    <p>Designer</p>
+                </div>
+
+            </div>
+            <div class="box7-1"><div class="box7-image"><img src="image/circle sec- (3).png" alt=""></div>
+                <p>Slate helps you see how many more days you need to work to reach your financial goal for the month and year.</p>
+                <div class="box7-image">
+                    <img src="image/stars sec-.png" alt="">
+                    <div class="name"><h4>Regina Miles</h4></div>
+                    <p>Designer</p>
+                </div></div>
+        </div>
+        </div>
+        </div>
+        <div class="page8">
+            <div class="main8-box">
+            <div class="sub-main-box">
+                <div class="head1"><h4>Newsletter</h4> </div>
+                <div class="head2"><h1>Our Experts Teacher</h1></div>
+                <div class="head3"><p>Problems trying to resolve the conflict between the two major realms of Classical physics: Newtonian mechanics </p></div>
+            </div>
+            <div class="rectangle">
+                <div class="Email"><h6>Your Email</h6></div>
+                <div class="Subscribe"><h5>Subscribe</h5></div>
+            </div>
+            </div>
+        </div>
+    <div class="page9">
+        <div class="page9-box">
+            <div class="row">
+                <h3>Company Info</h3>
+                <ul><li>About Us</li>
+                <li>Carrier</li>
+                <li>We are hiring</li>
+                <li>Blog</li>
+            </ul>
+            </div>
+             <div class="row">
+                <h3>Legal</h3>
+                <ul><li>About Us</li>
+                <li>Carrier</li>
+                <li>We are hiring</li>
+                <li>Blog</li>
+            </ul>
+            </div>
+                <div class="row">
+                <h3>Features</h3>
+                <ul><li>Business Marketing</li>
+                <li>User Analytic</li>
+                <li>Live Chat</li>
+                <li>Unlimited Support</li>
+            </ul>
+            </div>
+             
+                <div class="row">
+                <h3>Resources</h3>
+                <ul><li>IOS & Android</li>
+                <li>Watch a Demo</li>
+                <li>Customers</li>
+                <li>API</li>
+            </ul>
+            </div>
+            <div class="row5">
+                <h3>Get In Touch</h3>
+              <div class="row-image1"><img src="image/col-md-4.png" alt="">
+                
+              </div>
+            </div>
+        </div>
+        <div class="page9-box2">
+           
+            <div class="last-image">
+                <img src="image/row (3).png" alt="">
+                
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>
