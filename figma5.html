@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>AI University Counselor</title>
+<style>
+
+    body{
+        margin:0;
+        font-family:Arial, sans-serif;
+        background:#fafafa;
+    }
+
+    .navbar{
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+        padding:15px 40px;
+        background:white;
+        box-shadow:0 0 5px rgba(0,0,0,0.1);
+    }
+    .nav-left, .nav-right{
+        display:flex;
+        align-items:center;
+    }
+    .nav-left div, .nav-right div{
+        margin-right:25px;
+        font-size:14px;
+    }
+    .btn-login, .btn-register{
+        padding:8px 14px;
+        border-radius:6px;
+        border:1px solid #2444f9;
+        background:white;
+        cursor:pointer;
+    }
+    .btn-register{
+        background:#ff4d71;
+        color:white;
+        border:none;
+    }
+
+    .hero{
+        background:#2444f9;
+        color:white;
+        padding:70px 50px;
+        display:flex;
+        justify-content:space-between;
+        border-radius:20px;
+        margin:30px auto;
+        width:85%;
+    }
+    .hero-text{
+        width:50%;
+    }
+    .hero-text h1{
+        font-size:48px;
+        line-height:1.2;
+        margin:0;
+    }
+    .hero-text p{
+        margin-top:15px;
+    }
+    .hero-buttons{
+        margin-top:25px;
+    }
+    .btn{
+        padding:12px 18px;
+        border-radius:6px;
+        border:none;
+        cursor:pointer;
+        margin-right:10px;
+        font-size:14px;
+    }
+    .btn-white{
+        background:white;
+        color:#2444f9;
+    }
+    .btn-red{
+        background:#ff4d71;
+        color:white;
+    }
+    .hero-img img{
+        width:330px;
+        border-radius:10px;
+    }
+
+    .success{
+        width:85%;
+        margin:50px auto;
+        padding:20px;
+        background:white;
+    }
+    .success-title{
+        font-size:24px;
+        margin-bottom:10px;
+    }
+    .success-text{
+        color:#444;
+        margin-bottom:20px;
+    }
+    .numbers{
+        display:flex;
+        justify-content:flex-start;
+        margin-top:20px;
+    }
+    .numbers div{
+        margin-right:60px;
+        font-size:20px;
+        font-weight:bold;
+    }
+
+    .cta{
+        width:85%;
+        margin:40px auto;
+        background:#2444f9;
+        color:white;
+        padding:35px;
+        border-radius:15px;
+        display:flex;
+        justify-content:space-between;
+        align-items:center;
+    }
+    .cta button{
+        padding:12px 18px;
+        border-radius:6px;
+        border:none;
+        background:#ff4d71;
+        color:white;
+        cursor:pointer;
+    }
+
+    .testimonials{
+        text-align:center;
+        margin-top:50px;
+        font-size:22px;
+        font-weight:bold;
+    }
+    .cards{
+        width:85%;
+        margin:30px auto;
+        display:flex;
+        justify-content:space-between;
+    }
+    .card{
+        width:30%;
+        background:white;
+        padding:25px;
+        border-radius:12px;
+        box-shadow:0 0 10px rgba(0,0,0,0.1);
+    }
+    .card h3{
+        margin:0;
+        color:#2444f9;
+    }
+    .card p{
+        font-size:14px;
+        color:#444;
+    }
+    .V-image{
+        margin-left: 800px;
+    }
+    .verify{
+        margin-left: 200px;
+        margin-bottom: 100px;
+    }
+     .page4 {
+  width: 80%;
+  margin: 100px auto;
+}
+
+.page4-heading {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.page4-box2, .page4-box3, .page4-box4 {
+  border: 2px solid #3247C6;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.page5 {
+  width: 100%;
+  background-color: #3247C6;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: white;
+  padding: 40px 0;
+  gap: 40px;
+}
+
+.box1-page5, .box2-page5 {
+  width: 40%;
+}
+
+.page5-head2 {
+  border: 2px solid yellow;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 15px;
+  margin-top: 15px;
+}
+
+.enter-bar {
+  width: 500px;
+  height: 60px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.Subscribe {
+  background-color: #E54F6D;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+}
+
+
+@media (max-width: 1024px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+    gap: 15px;
+  }
+
+  .main-contener {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .heading {
+    width: 100%;
+    padding: 40px;
+  }
+
+  .page1-image,
+  .page1-image2 {
+    display: none;
+  }
+
+  .main-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box1, .box2, .box3 {
+    width: 80%;
+  }
+
+  .page5 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box1-page5, .box2-page5 {
+    width: 80%;
+  }
+
+  .enter-bar {
+    width: 80%;
+  }
+}
+
+@media (max-width: 600px) {
+  .main-contener a {
+    display: block;
+    margin: 8px 0;
+  }
+
+  .button2 {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .section {
+    flex-direction: column;
+    height: auto;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .page3-heading {
+    flex-direction: column;
+  }
+
+  .page4,
+   .page5 {
+    width: 95%;
+  }
+
+  .enter-bar {
+    flex-direction: column;
+    height: auto;
+    gap: 10px;
+    padding left: 150px;
+    margin-left: 200px;
+  }
+.Subscribe{
+  margin-left: 800px;
+}
+.p1{
+  margin-left: 200px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="navbar">
+
+    <div class="nav-left">
+        <div><img src="c:\Users\User\Desktop\html-css\practical5\image\TechEd (1).png"></b></div>
+        <div>US Guidance</div>
+        <div>UK Guidance</div>
+        <div>Essay Writing</div>
+        <div>Resources<img sec="c:\Users\User\Desktop\html-css\practical5\image\Vector 5 (1).png"></div>
+        <div>About Us<img sec="c:\Users\User\Desktop\html-css\practical5\image\Vector 5 (1).png"></div>
+    </div>
+
+    <div class="nav-right">
+        <div><button class="btn-login">Login</button></div>
+        <div><button class="btn-register">Register </button></div>
+    </div>
+
+</div>
+
+<div class="hero">
+
+    <div class="hero-text">
+        <h1>Your Personal <br> AI University <br> Counselor</h1>
+        <p>Access Free, Expert Guidance for US & UK University Admissions</p>
+
+        <div class="hero-buttons">
+            <button class="btn btn-white">Sign up for free</button>
+            <button class="btn btn-red">For School <img src="c:\Users\User\Desktop\html-css\practical5\image\ (2).png"></button>
+        </div>
+    </div>
+
+    <div class="hero-img">
+        <img src="c:\Users\User\Desktop\html-css\practical5\image\Chatbot-technology-blog-banner 1.png">
+    </div>
+
+</div>
+
+<div class="success">
+
+    <div class="success-title"><b>Boost Your Admission Odds with Proven Success Rate:</b></div>
+    <div class="success-text">Our students gain admission to their first-choice university.</div>
+
+    <div class="numbers">
+        <div><img src="c:\Users\User\Desktop\html-css\practical5\image\4x (1).png"><img src="c:\Users\User\Desktop\html-css\practical5\image\ (3).png "> <br><span style="font-size:14px;font-weight:normal;">Increase Chance</span></div>
+        <div><img src="c:\Users\User\Desktop\html-css\practical5\image\70% (1).png"><img src="c:\Users\User\Desktop\html-css\practical5\image\ (3).png"> <br><span style="font-size:14px;font-weight:normal;">Admission to Top University</span></div>
+    </div>
+    <div class="V-image">
+<img src="c:\Users\User\Desktop\html-css\practical5\image\human-experience-1-1024x767 1 (1).png">
+</div>
+</div>
+
+<div class="cta">
+    <div style="font-size:20px;">Access your AI university counselor now!</div>
+    <button>Sign up for free <img src="c:\Users\User\Desktop\html-css\practical5\image\ (2).png"></button>
+</div>
+
+<div class="testimonials">Testimonials</div>
+
+<div class="cards">
+
+    <div class="card">
+        <h3>Enoch</h3>
+        <p><b>Harvard University</b><br>Writing a university application essay is a lengthy process, and TechEd course is remarkably succinct, valuing efficiency without sacrificing detail. The points are well-supported by examples
+which are analyzed in detail.</p>
+<h5>Rated 5/5 stars</h5>
+<img src="c:\Users\User\Desktop\html-css\practical5\image\Vector (1).png">
+<img src="c:\Users\User\Desktop\html-css\practical5\image\Vector (1).png">
+<img src="c:\Users\User\Desktop\html-css\practical5\image\Vector (1).png">
+<img src="c:\Users\User\Desktop\html-css\practical5\image\Vector (1).png">
+<img src="c:\Users\User\Desktop\html-css\practical5\image\Vector (1).png">
+
+    </div>
+
+    <div class="card">
+        <h3>Nat</h3>
+        <p><b>Duke University</b><br>TechEd program is highly effective because it guides students through the entire college process. I especially like AlgoEd’s writing program. Not only does AlgoEd provide a variety of excellent examples, but they also ...</p>
+        <h5>Rated 5/5 stars</h5>
+<img src="c:\Users\User\Desktop\html-css\practical5\image\Vector (1).png">
+<img src="c:\Users\User\Desktop\html-css\practical5\image\Vector (1).png">
+<img src="c:\Users\User\Desktop\html-css\practical5\image\Vector (1).png">
+<img src="c:\Users\User\Desktop\html-css\practical5\image\Vector (1).png">
+<img src="c:\Users\User\Desktop\html-css\practical5\image\Vector (1).png">
+
+    </div>
+
+    <div class="card">
+        <h3>Isaac</h3>
+        <p><b>University of Pennsylvania</b><br>The university application process is really long and complicated.
+TechEd step-by-step videos really guide one through the entire
+process, including meeting key deadlines throughout the applica...</p>
+<h5>Rated 5/5 stars</h5>
+<img src="c:\Users\User\Desktop\html-css\practical5\image\Vector (1).png">
+<img src="c:\Users\User\Desktop\html-css\practical5\image\Vector (1).png">
+<img src="c:\Users\User\Desktop\html-css\practical5\image\Vector (1).png">
+<img src="c:\Users\User\Desktop\html-css\practical5\image\Vector (1).png">
+<img src="c:\Users\User\Desktop\html-css\practical5\image\Vector (1).png">
+
+    </div>
+    </div>
+
+<div class="page4">
+    <div class="page4-heading"><h1>FAQ</h1></div>
+    <div class="page4-box2">
+      <h4>What is career counselling?</h4><p>We spend roughly 8-12 hours a day, 5-6 days a week at work, building the foundations for a happy and successful life. It is important that we choose something we would enjoy doing for the rest of our lives. However, this is easier said than done, given that there are 12,000+ career options available today. How do we choose the right career path? Which of our interests would be best suited as a profession?</p>
+    </div>
+    <div class="page4-box3">
+      <h4>Why is career counselling important?</h4>
+    </div>
+    <div class="page4-box4">
+      <h4>Career counsellor training & certifications</h4>
+    </div>
+  </div>
+
+  <div class="page5">
+    <div class="box1-page5">
+      <p>Empower students to achieve their aspirations by offering personalized, high-quality, and affordable university admissions guidance.
+
+</p>
+      <div class="page5-head2">
+        <p>US Admissions Guidance</p>
+        <p>UK Admissions Guidance</p>
+      </div>
+      <div class="enter-bar">
+        <h3>Enter your email here</h3>
+        <div class="Subscribe"> Subscribe</div>
+      </div>
+    </div>
+    <div class="box2-page5">
+    
+        <h3>Resources</h3>
+        <p>Blog</p>
+        <p>University Search Tool</p>
+    </div>
+      <div>
+        <div class="p1">
+        <h3>About</h3>
+        <p>Our Mission</p>
+        <p>Our Team</p>
+        <p>Our Results</p>
+    
+      </div> 
+  </div>
+</body>
+</html>
